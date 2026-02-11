@@ -27,10 +27,7 @@ export const useAuth = () => {
   const signInWithGoogle = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
-        provider: 'google',
-        options: {
-          redirectTo: 'https://power-stack-pi.vercel.app/auth/callback'
-        }
+        provider: 'google'
       });
       if (error) {
         console.error('OAuth Error:', error);
