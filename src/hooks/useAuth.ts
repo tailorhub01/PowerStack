@@ -29,7 +29,7 @@ export const useAuth = () => {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: `${window.location.origin}/auth/callback`
+          redirectTo: 'https://power-stack-pi.vercel.app/auth/callback'
         }
       });
       if (error) {
